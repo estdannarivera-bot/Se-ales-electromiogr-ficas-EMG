@@ -15,24 +15,6 @@ La electromiografía (EMG) es fundamental porque permite registrar la actividad 
  
 ---
 
-## Requisitos e instalación
- 
-**Python 3.8+** con las siguientes librerías:
- 
-```bash
-pip install numpy matplotlib scipy
-```
- 
-**Ejecución:**
- 
-```bash
-python emg_fatiga.py
-```
- 
-> Asegúrese de que los archivos `senal_cap_gen.txt` y `senal_cap.txt` estén en el mismo
-> directorio que el script, o ajuste la ruta en la variable `ARCHIVOS` al inicio del código.
- 
----
  
 ## Parte A — Señal emulada (generador)
 ### Descripción
@@ -57,3 +39,7 @@ para calcular la frecuencia media y mediana de cada contracción.
 > provocaba doble detección en los flancos de subida/bajada de cada contracción, resultando
 > en ~10 picos en lugar de 5 y frecuencias medianas con oscilación artificial entre ~50 Hz y
 > ~80 Hz. 
+
+> Asegúrese de que los archivos `senal_cap_gen.txt` y `senal_cap.txt` estén en el mismo
+> directorio que el script, o ajuste la ruta en la variable `ARCHIVOS` al inicio del código.
+ 
