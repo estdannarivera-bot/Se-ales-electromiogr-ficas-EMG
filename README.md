@@ -23,6 +23,9 @@ Se configuró el generador de señales biológicas en modo EMG, simulando aproxi
 cinco contracciones musculares voluntarias. La señal fue adquirida, almacenada y procesada
 para calcular la frecuencia media y mediana de cada contracción.
 
+> Asegúrese de que los archivos `senal_cap_gen.txt` y `senal_cap.txt` estén en el mismo
+> directorio que el script, o ajuste la ruta en la variable `ARCHIVOS` al inicio del código.
+
 ### Procesamiento en Python
  
 | Paso | Descripción |
@@ -40,6 +43,5 @@ para calcular la frecuencia media y mediana de cada contracción.
 > en ~10 picos en lugar de 5 y frecuencias medianas con oscilación artificial entre ~50 Hz y
 > ~80 Hz. 
 
-> Asegúrese de que los archivos `senal_cap_gen.txt` y `senal_cap.txt` estén en el mismo
-> directorio que el script, o ajuste la ruta en la variable `ARCHIVOS` al inicio del código.
+
  
