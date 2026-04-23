@@ -11,21 +11,6 @@
 
 ## Introducción
  
-La fatiga muscular reduce la capacidad del músculo para controlar cargas y mantener
-contracciones eficaces, como consecuencia de la acumulación de lactato y la disminución
-del adenosín trifosfato (ATP). Un músculo fatigado tiene mayor riesgo de lesiones, por lo
-que su detección objetiva y oportuna resulta clínicamente relevante.
-
- Una de las formas más comunes de evaluar la fatiga es medir el lactato en sangre, cuyo
-nivel aumenta durante ejercicios intensos por el proceso anaeróbico de generación de
-energía. No obstante, este método es invasivo y poco práctico en escenarios no
-controlados.
- 
-La **electromiografía de superficie (sEMG)** constituye una alternativa no invasiva: registra
-la actividad eléctrica muscular desde la piel, capturando la suma de los potenciales de
-acción generados por las fibras musculares durante la contracción de las unidades motoras.
-Existen métricas en el dominio del tiempo y de la frecuencia que permiten cuantificar la
-fatiga muscular; entre las más utilizadas se encuentran la **frecuencia media** y la
-**frecuencia mediana** del espectro de potencia de la señal EMG.
+La electromiografía (EMG) es fundamental porque permite registrar la actividad eléctrica de los músculos en tiempo real, lo que facilita analizar su activación, intensidad y estado funcional. En esta práctica, su uso permitió detectar contracciones y estudiar la señal tanto en el dominio del tiempo como de la frecuencia, evidenciando comportamientos como la fatiga muscular mediante cambios en las frecuencias características. En la ingeniería biomédica, la EMG es clave para aplicaciones como el desarrollo de prótesis controladas por señales musculares, sistemas de rehabilitación, diagnóstico de trastornos neuromusculares y el diseño de interfaces humano-máquina, lo que la convierte en una herramienta esencial para entender e interactuar con el sistema neuromuscular.
  
 ---
