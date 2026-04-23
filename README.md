@@ -43,5 +43,8 @@ para calcular la frecuencia media y mediana de cada contracción.
 > en ~10 picos en lugar de 5 y frecuencias medianas con oscilación artificial entre ~50 Hz y
 > ~80 Hz. 
 
+### Detección de contracciones — Señal emulada
+
+![Deteccion de contracciones](emg_deteccion_gen.png)
 
  
