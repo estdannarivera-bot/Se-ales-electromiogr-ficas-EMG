@@ -115,6 +115,10 @@ peaks, _ = find_peaks(
 
 ![Deteccion de contracciones](EMG-PACIENTE.png)
 
+### Evolución de frecuencias 
+
+![Evolución de frecuencias](FRECUENCIASPACIENTE.png)
+
 ### Tabla de parámetros extraídos 
 
 | Contracción | Frecuencia Media |Frecuencia Mediana |
