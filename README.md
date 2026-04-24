@@ -156,7 +156,62 @@ plt.semilogx(xf[1:], yf[1:])
 
 ![FFT_generador](FFT_generador.png)
 
+En la señal generada se observa un comportamiento bastante estable en todas las contracciones, los espectros presentan formas similares, con una distribución de energía concentrada principalmente en bajas y medias frecuencias. Al comparar las primeras contracciones con las últimas, se nota una leve reducción en el contenido de altas frecuencias, este cambio es pequeño pero consistente, lo cual indica una ligera tendencia asociada a fatiga dentro de un sistema controlado. En general, la señal simulada mantiene un comportamiento uniforme, como era de esperarse al no estar afectada por factores fisiológicos reales.
 
+**Pico espectral**
+
+El pico espectral se calculó como la frecuencia de mayor magnitud dentro del espectro:
+
+```python
+pico_idx = np.argmax(yf)
+pico_freq = xf[pico_idx]
+```
 ![FFT_Pico](FFT_Pico.png)
 
+| Contracción | Pico (Hz) |
+|---|---|
+|1| 37.01 |
+|2| 36.00 |
+|3| 35.00 |
+|4| 35.00 |
+|5| 33.00 |
+
+Se observa un desplazamiento progresivo del pico espectral hacia frecuencias más bajas, pasando de aproximadamente 37 Hz a 33 Hz. Este comportamiento es característico de la fatiga muscular, donde disminuye el contenido de altas frecuencias.
+
+### Señal real
+
+**Espectro de amplitud (FFT)**
+
+![FFT_real](FFT_real.png)
+
+En la señal de la persona, el comportamiento espectral es más variable en comparación con la señal simulada, debido a que los espectros presentan diferencias notables entre contracciones, especialmente en la distribución de energía, en algunas contracciones se observa una reducción del contenido de altas frecuencias, mientras que en otras aparece un aumento inesperado, esto indica que la fatiga no se manifestó de forma completamente uniforme en señales reales. Al comparar las primeras contracciones con las últimas, no se evidencia una tendencia estrictamente decreciente, pero sí se identifican cambios en la forma del espectro que sugieren variaciones en la actividad muscular.
+
+**Pico espectral**
+
+![Pico_real](Pico_real.png)
+
+| Contracción | Pico (Hz) |
+|---|---|
+|1| 37.01 |
+|2| 57.02 |
+|3| 44.02 |
+|4| 25.01 |
+|5| 40.01 |
+
+El pico espectral presenta un comportamiento irregular, sin embargo, se destacan algunos valores bajos (por ejemplo, 25 Hz en la contracción 4), lo cual puede estar asociado a un episodio de fatiga. Esta variabilidad puede explicarse por:
+
+- Cambios en la intensidad de la contracción
+- Reclutamiento variable de unidades motoras
+
+### Interpretación
+
+El análisis espectral permitió evidenciar diferencias claras entre la señal simulada y la señal real, mostrando cómo el comportamiento en frecuencia cambia dependiendo de las condiciones de adquisición, en la señal generada se observa un comportamiento bastante estable a lo largo de todas las contracciones, con espectros muy similares entre sí y una distribución de energía que se mantiene consistente, aunque con una ligera reducción en el contenido de altas frecuencias hacia las últimas contracciones. Este comportamiento es coherente con un modelo controlado, donde la fatiga se manifiesta de forma progresiva y predecible mediante un desplazamiento suave del espectro hacia frecuencias más bajas.
+
+Por otro lado, en la señal del paciente el comportamiento es mucho más variable y menos uniforme, lo cual es esperado en un contexto real, aunque en algunas contracciones se evidencia una reducción del contenido de altas frecuencias y la aparición de picos en valores más bajos, en otras se presentan incrementos o cambios bruscos que rompen una posible tendencia lineal. Esta variabilidad puede explicarse por factores como cambios en la intensidad del esfuerzo o variaciones en el reclutamiento de unidades motoras, sí es posible identificar ciertos patrones asociados a fatiga, como la disminución ocasional del pico espectral y la redistribución de la energía hacia frecuencias más bajas.
+
+En general, los resultados muestran que la fatiga muscular no siempre se manifiesta de forma perfectamente decreciente en señales reales, pero sí genera cambios en el contenido espectral que pueden ser detectados mediante el análisis en frecuencia. 
+
+### Análisis espectral como herramienta diagnóstica en EMG
+
+El análisis espectral mediante FFT es una herramienta útil en electromiografía porque permite identificar cambios en la distribución de frecuencias que no son evidentes en el dominio del tiempo, lo cual resulta clave para evaluar el estado funcional del músculo; por ejemplo, es útil en la detección de fatiga muscular durante ejercicios prolongados al evidenciar el desplazamiento del espectro hacia bajas frecuencias, en procesos de rehabilitación para monitorear la recuperación muscular y la respuesta al tratamiento, y en el análisis de trastornos neuromusculares donde se presentan alteraciones en la actividad eléctrica del músculo.
 
