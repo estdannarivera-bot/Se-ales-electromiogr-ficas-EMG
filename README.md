@@ -32,14 +32,27 @@ Y que la línea de carga apunte al archivo correcto:
 ```python
 data = np.loadtxt("senal_generador.txt", delimiter=None, skiprows=1)
 ```
-
-
-
-
 ### Procesamiento en Python
  
+1. **Carga la señal** desde el archivo `.txt` y recalcula la frecuencia de muestreo `fs` a partir de los tiempos registrados.
+2. **Aplica un filtro pasa banda Butterworth** (20–450 Hz, orden 4) para eliminar ruido de baja frecuencia (artefactos de movimiento) y de alta frecuencia (ruido eléctrico). Se complementa con un filtro de mediana para suprimir picos aislados.
+3. **Calcula la envolvente** de la señal usando la transformada de Hilbert, seguida de un suavizado con filtro de media móvil (ventana de 200 ms).
+4. **Detecta las contracciones** mediante un umbral dinámico basado en la media y desviación estándar de la envolvente, utilizando `find_peaks` con restricciones de distancia mínima y prominencia.
+5. **Calcula la frecuencia media y mediana** espectral para cada contracción segmentada, aplicando FFT sobre ventanas de ±500 ms centradas en cada pico detectado.
+6. **Grafica** la señal filtrada con su envolvente, los picos de contracción detectados, y la evolución de frecuencia media y mediana a lo largo de las contracciones.
+```python
+# Fragmento clave – cálculo de frecuencia media y mediana
+def calcular_frecuencias(segmento, fs):
+    N = len(segmento)
+    yf = np.abs(fft(segmento))[:N//2]
+    xf = fftfreq(N, 1/fs)[:N//2]
+    potencia = yf**2
+    f_media = np.sum(xf * potencia) / np.sum(potencia)
+    potencia_acum = np.cumsum(potencia)
+    f_mediana = xf[np.where(potencia_acum >= potencia_acum[-1]/2)[0][0]]
+    return f_media, f_mediana
+```
 
-  
 
 ### Detección de contracciones — Señal emulada
 
