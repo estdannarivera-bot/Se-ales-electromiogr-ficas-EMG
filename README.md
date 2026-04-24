@@ -62,5 +62,10 @@ def calcular_frecuencias(segmento, fs):
 
 | Contracción | Frecuencia Media |Frecuencia Mediana |
 |---|---|---|
+|1|99.34|58.01|
+|2|99.82|57.01|
+|3|96.94 |56.01|
+|4|98.01 |56.01|
+|5|97.75 |56.01|
 
  
