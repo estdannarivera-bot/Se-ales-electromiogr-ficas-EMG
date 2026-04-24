@@ -56,6 +56,11 @@ def calcular_frecuencias(segmento, fs):
 
 ### Detección de contracciones — Señal emulada
 
-![Deteccion de contracciones]()
+![Deteccion de contracciones](EMG-GENERADORSENALES.png)
+
+### Tabla de parámetros extraídos 
+
+| Contracción | Frecuencia Media |Frecuencia Mediana |
+|---|---|---|
 
  
