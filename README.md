@@ -213,6 +213,7 @@ En la señal del paciente el comportamiento es más variable, como es esperado e
 
 El análisis espectral mediante FFT es una herramienta útil en electromiografía porque permite identificar cambios en la distribución de frecuencias que no son evidentes en el dominio del tiempo, lo cual resulta clave para evaluar el estado funcional del músculo; por ejemplo, es útil en la detección de fatiga muscular durante ejercicios prolongados al evidenciar el desplazamiento del espectro hacia bajas frecuencias, en procesos de rehabilitación para monitorear la recuperación muscular y la respuesta al tratamiento, y en el análisis de trastornos neuromusculares donde se presentan alteraciones en la actividad eléctrica del músculo.
 
+---
 
 ## Discusión 
 
@@ -224,6 +225,7 @@ Sí, generalmente la frecuencia media y la frecuencia mediana tienden a disminui
 
 El uso de la transformada de Fourier se justifica porque permite analizar la señal EMG en el dominio de la frecuencia, donde se pueden identificar cambios que no son evidentes en el dominio del tiempo. En terapias de rehabilitación, esta herramienta es útil para monitorear la evolución del paciente, evaluar la respuesta muscular al tratamiento y detectar signos de fatiga o mejora en la función muscular, esto facilita un seguimiento más objetivo y cuantitativo del proceso de recuperación.
 
+---
 
 ## Análisis de resultados
 
