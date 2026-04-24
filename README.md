@@ -18,13 +18,23 @@ La electromiografía (EMG) es fundamental porque permite registrar la actividad 
  
 ## Parte A — Señal emulada (generador)
 ### Descripción
- 
-Se configuró el generador de señales biológicas en modo EMG, simulando aproximadamente
-cinco contracciones musculares voluntarias. La señal fue adquirida, almacenada y procesada
-para calcular la frecuencia media y mediana de cada contracción.
 
-> Asegúrese de que los archivos `senal_cap_gen.txt` y `senal_cap.txt` estén en el mismo
-> directorio que el script.
+En esta parte se trabaja con el archivo `senal_generador.txt`, que contiene la señal generada por el simulador de señales biológicas configurado en modo EMG, emulando aproximadamente cinco contracciones musculares voluntarias. La señal fue adquirida, almacenada y procesada para calcular la frecuencia media y mediana de cada contracción.
+ 
+Para ejecutar esta parte, asegúrate de que el archivo `senal_generador.txt` esté en la misma carpeta que el script y que la variable `modo` esté configurada como:
+ 
+```python
+modo = "archivo"
+```
+ 
+Y que la línea de carga apunte al archivo correcto:
+ 
+```python
+data = np.loadtxt("senal_generador.txt", delimiter=None, skiprows=1)
+```
+
+
+
 
 ### Procesamiento en Python
  
