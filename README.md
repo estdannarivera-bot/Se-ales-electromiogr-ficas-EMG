@@ -33,6 +33,6 @@ para calcular la frecuencia media y mediana de cada contracción.
 
 ### Detección de contracciones — Señal emulada
 
-![Deteccion de contracciones](emg_deteccion_gen.png)
+![Deteccion de contracciones]()
 
  
