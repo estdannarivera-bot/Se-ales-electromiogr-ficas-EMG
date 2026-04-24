@@ -24,7 +24,7 @@ cinco contracciones musculares voluntarias. La señal fue adquirida, almacenada 
 para calcular la frecuencia media y mediana de cada contracción.
 
 > Asegúrese de que los archivos `senal_cap_gen.txt` y `senal_cap.txt` estén en el mismo
-> directorio que el script, o ajuste la ruta en la variable `ARCHIVOS` al inicio del código.
+> directorio que el script.
 
 ### Procesamiento en Python
  
