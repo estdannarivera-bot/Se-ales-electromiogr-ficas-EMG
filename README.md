@@ -75,6 +75,8 @@ def calcular_frecuencias(segmento, fs):
 |4|98.01 |56.01|
 |5|97.75 |56.01|
 
+La señal emulada no refleja el fenómeno de fatiga muscular de manera fisiológicamente significativa. Ambas frecuencias permanecen prácticamente constantes, lo que confirma que el generador produce contracciones homogéneas sin la variabilidad metabólica de un músculo real. Esta parte sirve como línea base de referencia para comparar con los resultados de la Parte B, donde sí se espera observar una tendencia descendente progresiva en ambas frecuencias a medida que el voluntario alcanza la fatiga.
+
 ## Parte B – Captura de la señal de paciente
 ### Descripción
 
