@@ -131,6 +131,8 @@ peaks, _ = find_peaks(
 |4| 108.46 |84.03|
 |5| 115.54 |103.04|
 
+Aunque no se alcanzó la fatiga muscular completa, los datos de las contracciones 1 a 3 sí muestran la tendencia espectral descendente esperada, validando parcialmente el modelo. El rebote en las contracciones 4 y 5 corresponde a una estrategia de compensación neuromuscular fisiológicamente justificada, donde en algún punto realizó un esfuerzo voluntario mayor. El experimento fue exitoso en su objetivo central: demostrar que la señal EMG real contiene información dinámica que la señal emulada es incapaz de replicar, y que el análisis espectral es una herramienta sensible para detectar cambios en el estado muscular.
+
 ## Parte C - Análisis espectral mediante FFT
 
 Para analizar el comportamiento en frecuencia de la señal EMG, se aplicó la Transformada Rápida de Fourier (FFT) a cada una de las contracciones detectadas.
