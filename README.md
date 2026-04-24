@@ -135,6 +135,10 @@ Para facilitar la comparación entre contracciones, la magnitud fue normalizada 
 yf = yf / np.max(yf)
 plt.semilogx(xf[1:], yf[1:])
 ```
+### Señal del generador
+
+**Espectro de amplitud (FFT)**
+
 
 
 
