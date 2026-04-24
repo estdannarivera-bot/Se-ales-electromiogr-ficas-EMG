@@ -119,3 +119,22 @@ peaks, _ = find_peaks(
 |5| 115.54 |103.04|
 
 ## Parte C - Análisis espectral mediante FFT
+
+Para analizar el comportamiento en frecuencia de la señal EMG, se aplicó la Transformada Rápida de Fourier (FFT) a cada una de las contracciones detectadas.
+
+El cálculo del espectro se realizó de la siguiente manera:
+
+```python
+yf = np.abs(fft(segmento))[:N//2]
+xf = fftfreq(N, 1/fs)[:N//2]
+```
+
+Para facilitar la comparación entre contracciones, la magnitud fue normalizada y representada en escala semilogarítmica:
+
+```python
+yf = yf / np.max(yf)
+plt.semilogx(xf[1:], yf[1:])
+```
+
+
+
