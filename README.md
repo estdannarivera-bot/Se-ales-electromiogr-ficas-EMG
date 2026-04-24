@@ -68,4 +68,26 @@ def calcular_frecuencias(segmento, fs):
 |4|98.01 |56.01|
 |5|97.75 |56.01|
 
+## Parte B – Captura de la señal de paciente
+### Descripción
+
+En esta parte se trabaja con el archivo `senal_guardada.txt`, que contiene la señal EMG real registrada desde electrodos de superficie colocados sobre el grupo muscular del voluntario (antebrazo), quien realizó contracciones repetidas hasta 5 contracciones. 
+Para ejecutar esta parte, modifica la línea de carga en el script:
  
+```python
+data = np.loadtxt("senal_captura.txt", delimiter=None, skiprows=1)
+```
+ 
+El resto de la variable `modo` se mantiene en `"archivo"`.
+
+ ### Procesamiento en Python
+ 
+ El flujo de procesamiento es idéntico al de la Parte A, pero aplicado sobre una señal real con mayor variabilidad y ruido. Los pasos clave son:
+ 
+1. **Carga de la señal real** desde `senal_guardada.txt` con recálculo automático de `fs`.
+2. **Filtrado pasa banda (20–450 Hz)** + filtro de mediana para acondicionar la señal y reducir artefactos de movimiento, ruido de red eléctrica y picos espurios.
+3. **Cálculo de la envolvente** con transformada de Hilbert y suavizado de 200 ms, que permite visualizar la activación muscular de forma continua.
+4. **Detección automática de contracciones** con umbral adaptativo. En señales reales, el número de contracciones varía según el nivel de esfuerzo del voluntario.
+5. **Segmentación y cálculo de frecuencia media y mediana** por contracción.
+6. **Análisis de tendencia:** se espera observar una **disminución progresiva** de ambas frecuencias a medida que el músculo se aproxima a la fatiga, fenómeno asociado a la acumulación de metabolitos y al reclutamiento de fibras lentas.
+
