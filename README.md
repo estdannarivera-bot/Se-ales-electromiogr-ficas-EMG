@@ -91,3 +91,31 @@ El resto de la variable `modo` se mantiene en `"archivo"`.
 5. **Segmentación y cálculo de frecuencia media y mediana** por contracción.
 6. **Análisis de tendencia:** se espera observar una **disminución progresiva** de ambas frecuencias a medida que el músculo se aproxima a la fatiga, fenómeno asociado a la acumulación de metabolitos y al reclutamiento de fibras lentas.
 
+
+```python
+# Umbral dinámico adaptado a la señal real
+threshold = np.mean(envolvente_suave) + 0.8 * np.std(envolvente_suave)
+ 
+peaks, _ = find_peaks(
+    envolvente_suave,
+    height=threshold,
+    distance=int(fs * 1),          # mínimo 1 segundo entre contracciones
+    prominence=np.std(envolvente_suave) * 0.5
+)
+```
+
+### Detección de contracciones — Señal paciente
+
+![Deteccion de contracciones](EMG-PACIENTE.png)
+
+### Tabla de parámetros extraídos 
+
+| Contracción | Frecuencia Media |Frecuencia Mediana |
+|---|---|---|
+|1| 110.06 |87.03|
+|2| 97.31 |77.03|
+|3| 87.50 |71.02|
+|4| 108.46 |84.03|
+|5| 115.54 |103.04|
+
+## Parte C - Análisis espectral mediante FFT
