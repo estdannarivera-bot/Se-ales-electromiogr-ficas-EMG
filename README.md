@@ -36,12 +36,7 @@ para calcular la frecuencia media y mediana de cada contracción.
 | Detección de picos | `find_peaks` con distancia mínima de **1.5 s** y umbral en percentil 85 |
 | Segmentación | Ventanas de ±600 ms centradas en cada pico |
 | Análisis espectral | FFT con ventana de Hanning, banda 20–450 Hz |
- 
-> **Nota sobre el parámetro de distancia:** Se utiliza `min_dist_s = 1.5 s` (en lugar de
-> 0.8 s) porque el generador produce pulsos muy regulares y simétricos. Una distancia menor
-> provocaba doble detección en los flancos de subida/bajada de cada contracción, resultando
-> en ~10 picos en lugar de 5 y frecuencias medianas con oscilación artificial entre ~50 Hz y
-> ~80 Hz. 
+  
 
 ### Detección de contracciones — Señal emulada
 
