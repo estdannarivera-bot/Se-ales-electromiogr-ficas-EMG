@@ -225,7 +225,19 @@ Sí, generalmente la frecuencia media y la frecuencia mediana tienden a disminui
 El uso de la transformada de Fourier se justifica porque permite analizar la señal EMG en el dominio de la frecuencia, donde se pueden identificar cambios que no son evidentes en el dominio del tiempo. En terapias de rehabilitación, esta herramienta es útil para monitorear la evolución del paciente, evaluar la respuesta muscular al tratamiento y detectar signos de fatiga o mejora en la función muscular, esto facilita un seguimiento más objetivo y cuantitativo del proceso de recuperación.
 
 
+## Análisis de resultados
 
+Los resultados obtenidos muestran que la frecuencia media y la frecuencia mediana tienden a disminuir a medida que el músculo se fatiga, lo cual se relaciona con la reducción en la velocidad de conducción de las fibras musculares y cambios en el reclutamiento de unidades motoras. En la señal generada este comportamiento se observa de forma más clara y progresiva, mientras que en la señal del paciente es más variable debido a condiciones reales como las diferencias en la ejecución de las contracciones.
+
+El uso de parámetros en el dominio de la frecuencia resulta útil para evaluar el estado muscular y detectar fatiga de manera no invasiva, especialmente en contextos como la fisiología del deporte. Sin embargo, su aplicación presenta limitaciones, ya que factores como la colocación de electrodos, el movimiento y la variabilidad entre mediciones pueden afectar los resultados.
+
+---
+
+## Conclusiones
+
+El análisis espectral mediante FFT permitió identificar cambios en la distribución de frecuencias de la señal EMG asociados a la fatiga muscular. En la señal generada estos cambios se observaron de manera clara y progresiva, mientras que en la señal del paciente se evidenció una mayor variabilidad, lo cual refleja las condiciones reales de adquisición.
+
+En escenarios no controlados, como el entrenamiento deportivo, estas técnicas son factibles y útiles para monitorear el estado muscular. Sin embargo, su uso requiere considerar factores externos que pueden afectar la señal, por lo que es recomendable complementarlas con otros métodos para obtener una evaluación más completa.
 
 
 
