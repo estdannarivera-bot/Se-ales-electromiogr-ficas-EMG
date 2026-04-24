@@ -28,14 +28,7 @@ para calcular la frecuencia media y mediana de cada contracción.
 
 ### Procesamiento en Python
  
-| Paso | Descripción |
-|------|-------------|
-| Filtro pasa-banda | Butterworth orden 4, 20–450 Hz |
-| Filtro de mediana | Ventana de 5 muestras (supresión de artefactos) |
-| Envolvente | Transformada de Hilbert + suavizado uniforme (150 ms) |
-| Detección de picos | `find_peaks` con distancia mínima de **1.5 s** y umbral en percentil 85 |
-| Segmentación | Ventanas de ±600 ms centradas en cada pico |
-| Análisis espectral | FFT con ventana de Hanning, banda 20–450 Hz |
+
   
 
 ### Detección de contracciones — Señal emulada
